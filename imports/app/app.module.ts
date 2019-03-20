@@ -11,6 +11,9 @@ import { TodoAddComponent } from './todo-add/todo-add.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+// Reactive Component Loader
+import { ReactiveComponentLoaderModule } from '@wishtack/reactive-component-loader';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         path: '**',
         component: PageNotFoundComponent
       }
-    ])
+    ]),
+    ReactiveComponentLoaderModule.forRoot()
   ],
   declarations: [
     AppComponent,
