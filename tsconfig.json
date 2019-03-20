@@ -7,8 +7,8 @@
     "importHelpers": true,
     "experimentalDecorators": true,
     "lib": [
-      "dom",
-      "es2015"
+      "es2018",
+      "dom"
     ],
     "module": "commonjs",
     "moduleResolution": "node",
@@ -17,11 +17,8 @@
     "skipLibCheck": true,
     "stripInternal": true,
     "noImplicitAny": false,
-    "types": [
-      "@types/meteor",
-      "@types/mocha",
-      "@types/chai",
-      "@types/sinon"
+    "typeRoots": [
+      "node_modules/@types"
     ]
   },
   "include": [
@@ -30,9 +27,15 @@
     "server/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".meteor/local"
   ],
   "compileOnSave": false,
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit": true,
+    "enableIvy": true
+  },
   "atom": {
     "rewriteTsconfig": false
   }

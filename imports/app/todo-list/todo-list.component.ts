@@ -5,8 +5,8 @@ import { Observable, Subscription } from 'rxjs';
 import { Meteor } from 'meteor/meteor';
 import { MeteorObservable } from 'meteor-rxjs';
 
-import { Todos } from '../../../../imports/collections/todos';
-import { Todo } from '../../../../imports/models/todo';
+import { Todos } from '../../both/collections/todos';
+import { Todo } from '../../both/models/todo';
 
 @Component({
   selector: 'todo-list',
